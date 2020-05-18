@@ -1,0 +1,6 @@
+.vscode/
+/vendor/
+/build/
+*.log
+local.*
+desktop.ini
