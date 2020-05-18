@@ -1,6 +1,5 @@
 .vscode/
-/vendor/
-/build/
+resources/
 *.log
 local.*
 desktop.ini

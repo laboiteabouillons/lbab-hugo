@@ -14,4 +14,4 @@
 
 ## License
 
-**LBAB-HUGO** is open-source and is licensed under the [BSD 3-Clause license](LICENSE).
+**LBAB-HUGO** is open-source and is licensed under the [BSD-3 license](LICENSE).
