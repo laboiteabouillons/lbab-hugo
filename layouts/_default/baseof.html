@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "fr-FR" }}">
+<html lang="{{ .Site.LanguageCode | default "fr" }}">
 {{- partial "head.html" . -}}
 
 <body>
+    {{- partial "hero.html" .Params.hero -}}
     {{- partial "header.html" . -}}
     <div id="content">
         {{- block "main" . }}{{- end }}
