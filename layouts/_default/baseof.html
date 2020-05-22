@@ -3,7 +3,7 @@
 {{- partial "head.html" . -}}
 
 <body>
-    {{- partial "hero.html" .Params.hero -}}
+    {{- partial "hero.html" .Params -}}
     {{- partial "header.html" . -}}
     <div id="content">
         {{- block "main" . }}{{- end }}

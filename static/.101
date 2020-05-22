@@ -1,3 +1,4 @@
 Stores all the static content: images, CSS, JavaScript, etc.
 When Hugo builds your site, all assets inside your static directory are copied over as-is.
 A good example of using the static folder is for verifying site ownership on Google Search Console, where you want Hugo to copy over a complete HTML file without modifying its content.
+By default, the static/ directory in the site project is used for all static files (e.g. stylesheets, JavaScript, images). The static files are served on the site root path (eg. if you have the file static/image.png you can access it using http://{server-url}/image.png, to include it in a document you can use ![Example image](/image.png) ).

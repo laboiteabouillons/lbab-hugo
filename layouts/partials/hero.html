@@ -1,7 +1,11 @@
+{{ with .hero }}
 <div id="top-image">
-    <img decoding="async" loading="lazy" src="/assets/{{.src}}" alt="{{.alt}}"
-        srcset="/assets/{{.src}} 1920w,/assets/{{.large}} 1366w,/assets/{{.medium}} 1024w,/assets/{{.tablet}} 768w,/assets/{{.smartphone}} 360w"
-        sizes="100vw" /></div>
+    <img decoding="async" loading="lazy" sizes="(max-width: 1920px) 100vw, 1920px" srcset="{{.smartphone}} 360w,
+            {{.tablet}} 768w,
+            {{.medium}} 1024w,
+            {{.large}} 1366w,
+            {{.src}} 1920w" src="{{.src}}" alt="{{.alt}}"></div>
 <div class="container responsive-padding">
     <p id="anchor"><q>{{.caption}}</q></p>
 </div>
+{{ end }}
