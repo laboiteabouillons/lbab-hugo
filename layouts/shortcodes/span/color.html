@@ -1,0 +1,6 @@
+{{- $color := .Get 0 -}}
+{{- with .Parent -}}
+<span style="color:{{$color}};">{{ .Inner | markdownify }}</span>
+{{- else -}}
+<span style="color:{{$color}};">{{ .Inner }}</span>
+{{- end }}

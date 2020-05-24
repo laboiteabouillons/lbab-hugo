@@ -1,0 +1,7 @@
+{{- with .Get "padding" -}}
+<p style="padding-left:{{.}};">
+    {{- else -}}
+<p>
+    {{- end }}
+    {{- .Inner -}}
+</p>
