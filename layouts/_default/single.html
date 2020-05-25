@@ -1,8 +1,12 @@
 {{ define "main" }}
-
-<article>
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
-</article>
-
+<div class="container responsive-padding">
+  <div class="row">
+    <div class="col-sm-12 col-lg-10 col-lg-offset-1">
+      <article>
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+      </article>
+    </div>
+  </div>
+</div>
 {{ end }}
