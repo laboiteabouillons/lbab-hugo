@@ -1,36 +1,50 @@
 <head>
-  <meta charset="utf-8" />
-  <title>{{if .IsHome}}{{ .Site.Title }} | {{ .Title }}{{else}}{{ .Title }} | {{.Site.Title }}{{end}}</title>
-  {{ if .Description -}}
-  <meta name="description" content="{{- .Description -}}" />
-  {{ else if .IsPage }}
-  <meta name="description" content="{{- .Summary -}}" />
-  {{ else if .Site.Params.description }}
-  <meta name=" description" content="{{- .Site.Params.description -}}" />
-  {{- end }}
-  {{ if ne .Hugo.Environment "development" }}{{ with .Site.BaseURL }}<base href="{{.}}" />{{ end }}{{ end }}
-  <meta name="author" content="{{ .Params.author }}" />
-  <meta name="robots" content="INDEX,FOLLOW" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-title" content="{{ .Site.Title }}" />
-  <meta name="application-name" content="{{ .Site.Title }}" />
-  <meta name="msapplication-TileColor" content="#59bcab" />
-  <meta name="theme-color" content="#59bcab" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#59bcab" />
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="author" type="text/plain" href="/humans.txt" />
-  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-  <link rel="stylesheet" type="text/css" media="all" href="/css/lbab.css" />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Athiti%3A500%2C700%7CCaveat%3A400%2C700%7CRaleway%3A500%2C500i%2C700%2C700&#038;subset=latin-ext"
-  />
-  <script type="text/javascript" src="/js/wle.js" async></script>
+    <meta charset="utf-8" />
+    <title>{{if .IsHome}}{{ .Site.Title }} | {{ .Title }}{{else}}{{ .Title }} | {{.Site.Title }}{{end}}</title>
+    {{ if .Description -}}
+    <meta name="description" content="{{- .Description -}}" />
+    {{ else if .IsPage }}
+    <meta name="description" content="{{- .Summary -}}" />
+    {{ else if .Site.Params.description }}
+    <meta name=" description" content="{{- .Site.Params.description -}}" />
+    {{- end }}
+    {{ if ne .Hugo.Environment "development" -}}{{ with .Site.BaseURL }}
+    <base href="{{.}}" />{{ end }}{{- end }}
+    {{ if eq .Hugo.Environment "development" -}}
+    <base href="http://163.172.24.53:1313/" />{{- end }}
+    <meta name="author" content="{{ .Params.author }}" />
+    <meta name="robots" content="INDEX,FOLLOW" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="{{ .Site.Title }}" />
+    <meta name="application-name" content="{{ .Site.Title }}" />
+    <meta name="msapplication-TileColor" content="#59bcab" />
+    <meta name="theme-color" content="#59bcab" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" crossorigin="use-credentials" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#59bcab" />
+    <link rel="author" type="text/plain" href="/humans.txt" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="stylesheet" type="text/css" media="all" href="/css/lbab.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Athiti%3A500%2C700%7CCaveat%3A400%2C700%7CRaleway%3A500%2C500i%2C700%2C700&#038;subset=latin-ext" crossorigin="anonymous" />
+    <!-- script type="text/javascript" src="/js/wle.js" async></script -->
+    {{.Hugo.Generator -}}
+    <style>
+        .symbol {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            stroke-width: 0;
+            stroke: currentColor;
+            fill: currentColor;
+            padding-left: 3px;
+        }
 
-  {{.Hugo.Generator -}}
+        a:hover,
+        a:focus {
+            box-shadow: 0 1px #59bcab;
+        }
+    </style>
 </head>

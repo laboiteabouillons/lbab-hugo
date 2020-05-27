@@ -1,12 +1,16 @@
 {{- $color := .Get "color" -}}
 {{- $author := .Get "author" -}}
 {{- $sitename := .Get "sitename" -}}
-<p>
+<p style="fill: currentColor;">
     <em>{{- .Inner | markdownify -}}</em>
-    <strong style="color:{{$color}};">
+    <strong style=" color:{{$color}};">
         {{- $author -}},&nbsp;
         {{- with .Get "siteurl" -}}
-        <a href="{{.}}" rel="external">{{- $sitename -}}</a>
+        <a href="{{.}}" rel="external">{{- $sitename -}}
+            <svg class="symbol">
+                <use xlink:href="/images/symbols.svg#icon-share"></use>
+            </svg>
+        </a>
         {{- else -}}
         {{- $sitename -}}
         {{- end -}}
