@@ -1,0 +1,5 @@
+{{- $color := .Get "color" -}}
+{{- $padding := .Get "padding" -}}
+<p style="padding-left:{{$padding}};">
+    <q style="color:{{.Get "color"}};">{{ .Inner | markdownify }}</q>
+</p>
