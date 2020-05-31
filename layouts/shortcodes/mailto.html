@@ -1,0 +1,7 @@
+{{- $color := .Get "color" -}}
+{{- $email := .Get "email" -}}
+<span style="color:{{$email}};">
+    <a href="mailto:{{$email}}">
+        {{ .Inner | markdownify }}
+    </a>
+</span>

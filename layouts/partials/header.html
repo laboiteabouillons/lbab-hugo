@@ -4,7 +4,7 @@
             <img src="https://www.laboiteabouillons.fr/wp-content/themes/lbab/assets/img/logo/lbab-45x45.png" alt="Logo de la boite à bouillons" width="45" height="45">
         </picture>
     </a>
-    <label class="drawer-toggle button" for="navigation-toggle"></label>
+    <label for="drawer-control" class="button drawer-toggle col-sm"></label>
     <ul>
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
@@ -27,9 +27,9 @@
         {{ end }}
     </ul>
 </header>
-<input type="checkbox" id="navigation-toggle" />
+<input type="checkbox" id="drawer-control" class="drawer" value="on" />
 <nav class="drawer hidden-md hidden-lg">
-    <label class="close" for="navigation-toggle"></label>
+    <label for="drawer-control" class="button drawer-close"></label>
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
     {{ if .HasChildren }}
