@@ -1,0 +1,19 @@
+{
+    "name": "lbab-hugo",
+    "private": true,
+    "scripts": {},
+    "dependencies": {},
+    "browserlists": [
+        "> 1%",
+        "last 2 versions"
+    ],
+    "hintConfig": {
+        "parsers": [
+            "css",
+            "html",
+            "javascript",
+            "sass"
+        ],
+        "hintsTimeout": 120000
+    }
+}
