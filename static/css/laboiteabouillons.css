@@ -74,7 +74,6 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Raleway", Arial, sans-serif;
 	line-height: 1.2;
 	margin: calc(1.5 * var(--universal-margin)) var(--universal-margin);
 	font-weight: 500;
@@ -1808,6 +1807,10 @@ span.icon-user {
 		clip-path: inset(100%) !important;
 		overflow: hidden !important;
 	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Raleway", Arial, sans-serif;
 }
 
 blockquote, cite, q, figcaption {
