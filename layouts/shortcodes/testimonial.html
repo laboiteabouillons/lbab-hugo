@@ -4,15 +4,15 @@
 <p style="fill: currentColor;">
     <em>{{- .Inner | markdownify -}}</em>
     <strong style=" color:{{$color}};">
-        {{- $author -}},&nbsp;
         {{- with .Get "siteurl" -}}
-        <a href="{{.}}" rel="external">{{- $sitename -}}
+        <a href="{{.}}" rel="external">
+            {{- $author -}},&nbsp;{{- $sitename -}}
             <svg class="symbol">
-                <use xlink:href="/images/symbols.svg#icon-share"></use>
+                <use xlink:href="/images/symbols.svg#external-link"></use>
             </svg>
         </a>
         {{- else -}}
-        {{- $sitename -}}
+        {{- $author -}},&nbsp;{{- $sitename -}}
         {{- end -}}
     </strong>
 </p>

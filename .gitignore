@@ -1,5 +1,7 @@
 .vscode/
 resources/
+node_modules/
 *.log
 local.*
 desktop.ini
+package-lock.json

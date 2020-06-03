@@ -11,8 +11,10 @@
     {{ else if .Site.Params.description }}
     <meta name=" description" content="{{- .Site.Params.description -}}" />
     {{- end }}
-    {{ if ne .Hugo.Environment "development" -}}{{ with .Site.BaseURL }}<base href="{{.}}" />{{ end }}{{- end }}
-    {{ if eq .Hugo.Environment "development" -}}<base href="http://163.172.24.53:1313/" />{{- end }}
+    {{ if ne .Hugo.Environment "development" -}}{{ with .Site.BaseURL }}
+    <base href="{{.}}" />{{ end }}{{- end }}
+    {{ if eq .Hugo.Environment "development" -}}
+    <base href="http://163.172.24.53:1313/" />{{- end }}
     <meta name="author" content="{{ .Params.author }}" />
     <meta name="robots" content="INDEX,FOLLOW" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -30,16 +32,6 @@
     <!-- script type="text/javascript" src="/js/wle.js" async></script -->
     {{.Hugo.Generator -}}
     <style>
-        .symbol {
-            display: inline-block;
-            width: 1em;
-            height: 1em;
-            stroke-width: 0;
-            stroke: currentColor;
-            fill: currentColor;
-            padding-left: 3px;
-        }
-
         /*
         header ul,
         header li {

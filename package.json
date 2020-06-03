@@ -15,5 +15,8 @@
             "sass"
         ],
         "hintsTimeout": 120000
+    },
+    "devDependencies": {
+        "prettier": "2.0.5"
     }
 }
