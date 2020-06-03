@@ -235,6 +235,64 @@ a:hover, a:focus {
 	box-shadow: 0 2px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Raleway", Arial, sans-serif;
+}
+
+blockquote, cite, q, figcaption {
+	font-family: "Caveat", cursive;
+}
+
+cite, q {
+	font-size: 1.25rem;
+}
+
+.centeredAlignedText {
+	text-align: center;
+}
+
+.justifiedAlignedText {
+	text-align: justify;
+}
+
+.leftAlignedText {
+	text-align: left;
+}
+
+.rightAlignedText {
+	text-align: right;
+}
+
+.circularPicto {
+	border-radius: 500rem;
+	width: 90px;
+	height: auto;
+}
+
+figure.fullWidth {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+figure img {
+	width: 100%;
+}
+
+.floatedImage {
+	float: left;
+	margin-right: 1em;
+	margin-bottom: 0em;
+}
+
+.rotatedImage {
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.floatedImage:last-child {
+	margin-bottom: 0em;
+}
+
 /*
   Definitions for the grid system, cards and containers.
 */
@@ -691,6 +749,45 @@ a:hover, a:focus {
 
 .card > .section:last-child {
 	border-bottom: 0;
+}
+
+.celledGrid > .row > [class*="col-"] {
+	border-top: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.celledGrid
+> .row:first-child
+> [class*="col-"]:first-child {
+	border-top: none !important;
+}
+
+@media screen and (min-width: 810px) {
+	.celledGrid > .row {
+		-webkit-box-shadow: 0px -1px 0px 0px #d4d4d5;
+		box-shadow: 0px -1px 0px 0px #d4d4d5;
+	}
+	.celledGrid > .row > [class*="col-"] {
+		border-top: none !important;
+		-webkit-box-shadow: -1px 0px 0px 0px #d4d4d5;
+		box-shadow: -1px 0px 0px 0px #d4d4d5;
+	}
+	.celledGrid > .row:first-child {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	.celledGrid > .row > [class*="col-"]:first-child {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+}
+
+.equalCard {
+	-webkit-box-pack: start;
+	-webkit-box-align: start;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	-webkit-align-self: auto;
+	align-self: auto;
 }
 
 @media screen and (min-width: 240px) {
@@ -1270,6 +1367,20 @@ footer.sticky {
 	}
 }
 
+#nav-drawer h3 {
+	text-align: center;
+}
+
+#nav-drawer a:hover, #nav-drawer a:focus {
+	box-shadow: none;
+	background: var(--header-back-color);
+	color: var(--header-fore-color);
+}
+
+[type="checkbox"].drawer + * .drawer-close:hover, [type="checkbox"].drawer + * .drawer-close:focus {
+	background: var(--header-hover-back-color);
+}
+
 /*
   Definitions for contextual background elements, toasts and tooltips.
 */
@@ -1718,112 +1829,6 @@ mark.tag {
 		clip-path: inset(100%) !important;
 		overflow: hidden !important;
 	}
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: "Raleway", Arial, sans-serif;
-}
-
-blockquote,
-cite,
-q,
-figcaption {
-	font-family: "Caveat", cursive;
-}
-
-cite,
-q {
-	font-size: 1.25rem;
-}
-
-.centeredAlignedText {
-	text-align: center;
-}
-
-.justifiedAlignedText {
-	text-align: justify;
-}
-
-.leftAlignedText {
-	text-align: left;
-}
-
-.rightAlignedText {
-	text-align: right;
-}
-
-.circularPicto {
-	border-radius: 500rem;
-	width: 90px;
-	height: auto;
-}
-
-figure.fullWidth {
-	margin-left: 0px;
-	margin-right: 0px;
-}
-
-figure img {
-	width: 100%;
-}
-
-.floatedImage {
-	float: left;
-	margin-right: 1em;
-	margin-bottom: 0em;
-}
-
-.rotatedImage {
-	-webkit-transform: rotate(180deg);
-	transform: rotate(180deg);
-}
-
-.floatedImage:last-child {
-	margin-bottom: 0em;
-}
-
-.celledGrid > .row > [class*="col-"] {
-	border-top: 1px solid rgba(34, 36, 38, 0.15);
-}
-
-.celledGrid
-> .row:first-child
-> [class*="col-"]:first-child {
-	border-top: none !important;
-}
-
-@media screen and (min-width: 810px) {
-	.celledGrid > .row {
-		-webkit-box-shadow: 0px -1px 0px 0px #d4d4d5;
-		box-shadow: 0px -1px 0px 0px #d4d4d5;
-	}
-	.celledGrid > .row > [class*="col-"] {
-		border-top: none !important;
-		-webkit-box-shadow: -1px 0px 0px 0px #d4d4d5;
-		box-shadow: -1px 0px 0px 0px #d4d4d5;
-	}
-	.celledGrid > .row:first-child {
-		-webkit-box-shadow: none;
-		box-shadow: none;
-	}
-	.celledGrid > .row > [class*="col-"]:first-child {
-		-webkit-box-shadow: none;
-		box-shadow: none;
-	}
-}
-
-.equalCard {
-	-webkit-box-pack: start;
-	-webkit-box-align: start;
-	-webkit-justify-content: flex-start;
-	justify-content: flex-start;
-	-webkit-align-self: auto;
-	align-self: auto;
 }
 
 footer hr {
