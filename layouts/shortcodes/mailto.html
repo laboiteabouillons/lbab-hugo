@@ -1,2 +1,11 @@
 {{- $color := .Get "color" -}}
-<aside style="color:{{$color}};"><a href="mailto:{{.Site.Params.email}}" rel="external">{{ .Inner | markdownify }}</a></aside>
+<aside>
+    <strong style=" color:{{$color}};">
+        <a href="mailto:{{.Site.Params.email}}" rel="external">
+            <svg class="symbol">
+                <use xlink:href="/images/symbols.svg#mail"></use>
+            </svg>
+            {{ .Inner | markdownify }}
+        </a>
+    </strong>
+</aside>
