@@ -1,7 +1,2 @@
 {{- $color := .Get "color" -}}
-{{- $email := .Get "email" -}}
-<span style="color:{{$email}};">
-    <a href="mailto:{{$email}}">
-        {{ .Inner | markdownify }}
-    </a>
-</span>
+<aside style="color:{{$color}};"><a href="mailto:{{.Site.Params.email}}" rel="external">{{ .Inner | markdownify }}</a></aside>
