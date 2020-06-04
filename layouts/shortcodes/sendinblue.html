@@ -1,6 +1,6 @@
 {{- $user := .Get "user" -}}
 {{- $version := .Get "version" -}}
 <div class="iframe-container">
-    <iframe src="https://my.sendinblue.com/users/subscribe/js_id/{{$user}}/id/{{$version}}" allowfullscreen>
+    <iframe title="Souscription à la newsletter" src="https://my.sendinblue.com/users/subscribe/js_id/{{$user}}/id/{{$version}}" allow="fullscreen">
     </iframe>
 </div>
