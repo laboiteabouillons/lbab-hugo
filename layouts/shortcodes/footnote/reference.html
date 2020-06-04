@@ -1,0 +1,2 @@
+{{- $id := .Get "id" -}}
+<a href="{{.Page.RelPermalink}}#{{$id}}"><sup>{{ .Inner | markdownify }}</sup></a>
