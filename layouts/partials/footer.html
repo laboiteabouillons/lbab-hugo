@@ -2,10 +2,10 @@
     <div class="container responsive-padding">
         <div class="row">
             <div class="col-sm-12 col-md-7 col-lg-4">
-
+                {{- partial "footer/contact.html" . -}}
             </div>
             <div class="col-sm-12 col-md-5 col-lg-8">
-
+                {{- partial "footer/article.html" . -}}
             </div>
         </div>
         <hr />
@@ -13,12 +13,31 @@
             <div class="col-sm">
                 <aside>
                     <ul>
-                        <li>Copyright&nbsp;&copy;&nbsp;La boîte à bouillons&nbsp;2020</li>
-                        <li>Tous&nbsp;droits&nbsp;réservés</li>
-                        <li><a title="Mentions légales" rel="next"
-                                href="/lesprit/mentions-legales/">Mentions&nbsp;légales</a></li>
-                        <li>Sitemap</li>
-                        <li>RSS&nbsp;Feed</li>
+                        <li>Copyright &copy; {{ now.Format "2006" }},&nbsp;{{- .Site.Params.author -}},&nbsp;{{- .Site.Copyright -}}</li>
+                        <li>
+                            <a title="Mentions légales" rel="next" href="/mentions-legales/">
+                                <svg class="symbol">
+                                    <use xlink:href="/images/symbols.svg#link"></use>
+                                </svg>
+                                Mentions&nbsp;légales
+                            </a>
+                        </li>
+                        <li>
+                            <a title="Sitemap" rel="sitemap" href="/sitemap.xml">
+                                <svg class="symbol">
+                                    <use xlink:href="/images/symbols.svg#link"></use>
+                                </svg>
+                                Sitemap
+                            </a>
+                        </li>
+                        <li>
+                            <a type="application/rss+xml" title="RSS Feed" rel="alternate" href="/index.xml">
+                                <svg class="symbol">
+                                    <use xlink:href="/images/symbols.svg#link"></use>
+                                </svg>
+                                RSS&nbsp;Feed
+                            </a>
+                        </li>
                     </ul>
                 </aside>
             </div>

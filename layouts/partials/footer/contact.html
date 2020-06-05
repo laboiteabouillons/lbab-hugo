@@ -1,21 +1,40 @@
 <aside class="alignedTextFooter">
     <picture class="floatedImage">
-        <source srcset="assets/img/logo/lbab.svg" type="image/svg+xml" />
-        <img src="assets/img/logo/lbab-144x144.png" alt="Logo de la boite à bouillons" width="144"
-            height="144" />
+        <source srcset="/images/logo/lbab-144x144.webp" type="image/webp">
+        <img src="/images/logo/lbab-144x144.png" alt="Bulles de différentes couleurs s'échappant d'une boite cubique sur laquelle est écrit La boite à bouillons." />
     </picture>
     <h5><strong>CONTACT</strong></h5>
-    <p>Anne-Sophie&nbsp;Evrard<br />
-        La boite à bouillons - Nantes<br />
-        &#9743;&nbsp;<a href="tel:0663354236">06 63 35 42 36</a><br />
-        &#9993;&nbsp;<a
-            href="mailto:contact@laboiteabouillons.fr">contact@laboiteabouillons.fr</a><br />
-        Retrouvez-nous sur&nbsp;<a href="https://www.facebook.com/laboiteabouillons/"
-            title="Aller sur la page facebook de La boite à bouillons" rel="external">
+    <address>
+        <a href="/la-fondatrice/" rel="author" title="La fondatrice">
+            <svg class="symbol">
+                <use xlink:href="/images/symbols.svg#link"></use>
+            </svg>
+            &nbsp;{{- .Site.Params.author -}}</a>
+        <br />
+        <svg class="symbol">
+            <use xlink:href="/images/symbols.svg#map-pin"></use>
+        </svg>
+        &nbsp;{{- .Site.Params.address -}}
+        <br />
+        <a href="tel:{{.Site.Params.phoneref}}" rel="external" title="Appelez-moi!">
+            <svg class="symbol">
+                <use xlink:href="/images/symbols.svg#phone"></use>
+            </svg>
+            &nbsp;{{- .Site.Params.phonedisplay -}}
+        </a>
+        <br />
+        <a href="mailto:{{.Site.Params.email}}" rel="external" title="Ouvre votre client de messagerie">
+            <svg class="symbol">
+                <use xlink:href="/images/symbols.svg#mail"></use>
+            </svg>
+            &nbsp;{{- .Site.Params.email -}}
+        </a>
+    </address>
+    <p>Retrouvez-nous sur&nbsp;
+        <a href="{{.Site.Params.facebook}}" title="Lien externe vers facebook" rel="external">
             <picture>
-                <source srcset="assets/img/vendor/facebook.svg" type="image/svg+xml" />
-                <img class="icon" src="assets/img/vendor/facebook.png" alt="Logo de facebook" width="20"
-                    height="20" />
+                <source srcset="/images/vendor/facebook-20x20.webp" type="image/webp">
+                <img src="/images/vendor/facebook-20x20.png" alt="Logo de facebook" />
             </picture>
         </a></p>
 </aside>

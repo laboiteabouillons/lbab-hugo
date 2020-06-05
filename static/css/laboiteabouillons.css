@@ -231,7 +231,7 @@ a:visited {
 	color: var(--a-visited-color);
 }
 
-a:hover, a:focus {
+a:not(.button):hover, a:not(.button):focus {
 	box-shadow: 0 2px;
 }
 
@@ -1844,18 +1844,20 @@ footer li {
 }
 
 footer li:not(:first-child):before {
-	content: "\B7\A0";
+	content: "\A0";
+	/* \b7 is a middot, \a0 is a space */
 }
 
 footer li:after {
 	content: "\2009";
+	/* insecable space */
 }
 
 footer a.button {
 	color: #f5f5f5;
 }
 
-footer .icon {
+footer img {
 	vertical-align: top;
 }
 
@@ -1863,7 +1865,7 @@ footer .alignedTextFooter {
 	text-align: center;
 }
 
-@media screen and (max-width: 810px - 1px) {
+@media screen and (max-width: 809px) {
 	footer li,
 	footer .floatedImage {
 		float: inherit;
