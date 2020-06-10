@@ -1,6 +1,6 @@
 <header class="row sticky">
     <span class="logo">
-        <a href="/" rel="home">
+        <a href="/" rel="first">
             <picture width="45" height="45">
                 <source srcset="/images/logo/lbab-45x45.webp" type="image/webp">
                 <source srcset="/images/logo/lbab-nobkg.svg" type="image/svg+xml">
@@ -13,7 +13,7 @@
     {{- range .Site.Menus.main -}}
     {{- if .HasChildren -}}
     <!-- li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}" -->
-    <a href="{{ .URL }}" class="button col-sm col-md hidden-sm">{{ .Title }}</a>
+    <a href="{{ .URL }}" rel="{{ $currentPage.Params.rel }}" class="button col-sm col-md hidden-sm">{{ .Title }}</a>
     <!-- ul class="sub-menu">
                 {{ range .Children }}
                 <li class="link {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
@@ -24,7 +24,7 @@
     <!-- /li -->
     {{- else -}}
     <!-- li -->
-    <a href="{{ .URL }}" class="button col-sm col-md hidden-sm">{{ .Title }}</a>
+    <a href="{{ .URL }}" rel="{{ $currentPage.Params.rel }}" class="button col-sm col-md hidden-sm">{{ .Title }}</a>
     <!-- /li -->
     {{- end -}}
     {{- end -}}
@@ -38,10 +38,10 @@
         <label for="drawer-control" class="button drawer-close"></label>
         {{- $currentPage := . -}}
         {{- range .Site.Menus.main -}}
-        <a href="{{ .URL }}" rel="">{{ .Name }}</a>
+        <a href="{{ .URL }}" rel="{{ $currentPage.Params.rel }}">{{ .Title }}</a>
         {{ if .HasChildren }}
         {{ range .Children }}
-        <a class="sublink-1" href="{{ .URL }}" rel="">{{ .Name }}</a>
+        <a class="sublink-1" href="{{ .URL }}" rel="{{ $currentPage.Params.rel }}">{{ .Title }}</a>
         {{- end }}
         {{- end }}
         {{- end }}
