@@ -1,0 +1,6 @@
+<a{{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }} href="{{ .Get "link" }}" rel="{{ .Get "rel" }}">
+    {{ with .Get "title" -}}{{ . }}{{- end -}}
+    <svg class="symbol">
+        <use xlink:href="/images/symbols.svg#external-link"></use>
+    </svg>
+</a>
