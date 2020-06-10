@@ -1967,6 +1967,10 @@ footer .alignedTextFooter {
 	font-weight: 900;
 }
 
+#top-arrows a:hover, #top-arrows a:focus {
+	box-shadow: none;
+}
+
 .pagination {
 	padding-top: 2em;
 	text-align: center;
