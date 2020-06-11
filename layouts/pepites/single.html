@@ -1,0 +1,34 @@
+{{ define "main" }}
+<div class="container responsive-padding">
+    <div class="row">
+        <div class="col-sm-12 col-lg-10 col-lg-offset-1">
+            <article>
+                <h1>{{ .Title }}</h1>
+                {{ .Content }}
+                <div class="row">
+                    {{- range $.Site.Data.pepites }}
+                    <div class="card large">
+                        {{- with .Logo -}}
+                        <a href="{{ .link }}" rel="external">
+                            <img class="section media" src="{{ .img }}" alt="{{ .alt }}" width="{{ .width }}" height="{{ .height }}">
+                        </a>
+                        {{- end -}}
+                        <p class="section double-padded">
+                            <q>{{.Description | markdownify }}</q>
+                        </p>
+                        <p class="section" style="color:#fec73e;">
+                            <a href="mailto:{{ $.Site.Params.email }}?subject=Je%20souhaire%20rencontrer%20{{ .Owner | htmlEscape }}%20de%20{{ .Pepite | htmlEscape }}" rel="external">
+                                <svg class="symbol">
+                                    <use xlink:href="/images/symbols.svg#mail"></use>
+                                </svg>
+                                Rencontrer {{ .Owner }}
+                            </a>
+                        </p>
+                    </div>
+                    {{- end }}
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+{{ end }}
